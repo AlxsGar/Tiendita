@@ -1,0 +1,21 @@
+{
+  "productList": [
+    {
+      "productName": "Sabritas",
+      "productCategory": "Papas",
+      "productBuy": "13",
+      "productSell": "15",
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

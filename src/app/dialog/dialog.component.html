@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Agregar Producto</h1>
+<div mat-dialog-content>
+    <form [formGroup]="productForm">
+        <mat-form-field appearance="fill">
+            <mat-label>Ingresa Nombre</mat-label>
+            <input formControlName="productName" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Selecciona</mat-label>
+            <mat-select formControlName="productCategory">
+                <mat-option *ngFor="let category of categoriesList" value={{category}}>{{category}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Precio de compra</mat-label>
+            <input formControlName="productBuy" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Precio de venta</mat-label>
+            <input formControlName="productSell" matInput>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-action [align]="'center'">
+    <button mat-raised-button color="primary" mat-dialog-close (click)="addProduct()">{{actionBtn}}</button>
+    <button mat-raised-button color="warn" mat-dialog-close>Cerrar</button>
+</div>
